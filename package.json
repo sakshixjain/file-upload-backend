@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev":"nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cloudinary": "^2.5.0",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
+    "express-fileupload": "^1.5.1",
     "mongoose": "^8.7.0",
     "nodemon": "^3.1.7"
   }
