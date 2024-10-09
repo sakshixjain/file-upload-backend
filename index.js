@@ -4,12 +4,15 @@ const app= express();
 
 //port find rna h
 require("dotenv").config();
-const PORT= process.env.PORT || 4000;
+const PORT= process.env.PORT || 4001;
 
 //middle ware add krne h
 app.use(express.json());
 const fileupload= require("express-fileupload");
-app.use(fileupload());
+app.use(fileupload({
+    useTempFiles : true,
+    tempFileDir : '/tmp/'
+}));
 
 //db se connect
 const db= require("./config/Database");
