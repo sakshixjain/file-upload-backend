@@ -1,5 +1,8 @@
 const File= require("../models/File");
 const cloudinary= require("cloudinary").v2;
+
+
+
 //localfileUpload -> handlr function
 
 exports.localFileUpload = async(req,res)=>{
@@ -53,7 +56,7 @@ exports.imageUpload = async(req,res)=>{
   console.log(file);
 
   //validation 
-  const supportedTypes= ["jpg","jpeg","png"];
+  const supportedTypes= ["jpg","jpeg","png","webp"];
   const fileType= file.name.split('.')[1].toLowerCase();
   console.log("File Type: ",fileType);
   if(!isFileTypeSupported(fileType,supportedTypes)){
